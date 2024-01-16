@@ -1,6 +1,6 @@
 # Simple 'n Easy Full Stack App for CSC424
 
-Hi! I'm Gabriel and this is the 
+Hi! I'm Gabriel and this is the submission for the start of csc424.
 
 
 # READ BEFORE RUNNING
