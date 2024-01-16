@@ -3,6 +3,7 @@ const cors = require('cors');
 const app = express();
 const port = 8000;
 
+app.use(cors());
 app.use(express.json());
 const users = {
     user_list
@@ -63,7 +64,8 @@ app.post('/account/login', (req, res) => {
     } else if (result[0]['pwd'] !== pwd){
         return res.status(401).send("Invalid Credentials");
     } else {
-        return res.status(200).send("OK");
+        randtoken = Math.floor(Math.random() * 10000);
+        return res.status(200).send(randtoken.toString());
     }
 });
 

@@ -21,7 +21,8 @@ export const Login = () => {
        
         const response = await promise;
         if (response.ok) {
-            value.onLogin();
+            const token = await response.text();
+            value.onLogin(token);
         } else {
             alert("Login Failed");
         }

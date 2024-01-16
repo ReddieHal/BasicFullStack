@@ -8,8 +8,8 @@ export const AuthProvider = ({ children }) => {
 
     const [token, setToken] = useState(null);
 
-    const handleLogin = async () => {
-        const token = await fakeAuth();
+    const handleLogin = async (token) => {
+        // const token = await fakeAuth();
         setToken(token);
         navigate("/landing");
     };
