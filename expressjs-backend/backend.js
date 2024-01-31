@@ -16,16 +16,10 @@ const isPasswordOk = (pwd) => {
 }
 
 // get users, if request sends a name filter then it'll filter otherwise return all users
-app.get('/users', (req, res) => {
-    const name = req.query.username;
-    if (name != undefined){
-        let result = findUserByName(name);
-        result = {users_list: result};
-        res.send(result);
-    }
-    else{
-        res.send(users);
-    }
+app.get('/users', authenticateUser, async (req, res) => {
+    const result = await userServices.getUsers()
+    res.send(result)
+      
 });
 
 app.post('/account/register', async (req, res) => {

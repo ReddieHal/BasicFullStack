@@ -20,17 +20,10 @@ mongoose
   })
   .catch((error) => console.log(error));
 
-async function getUsers(name, job) {
-  let result;
-  if (name === undefined && job === undefined) {
-    result = await userModel.find();
-  } else if (name && !job) {
-    result = await findUserByName(name);
-  } else if (job && !name) {
-    result = await findUserByJob(job);
+  async function getUsers() {
+    const promise = await userModel.find()
+    return promise
   }
-  return result;
-}
 
 async function findUserById(id) {
   try {
