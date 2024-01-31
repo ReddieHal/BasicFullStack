@@ -1,0 +1,743 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.4.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "serialNumber": "urn:uuid:85fdcfb8-8e6d-4ba1-8317-25678736ab87",
+  "metadata": {
+    "timestamp": "2024-01-31T08:55:50.505Z",
+    "tools": [
+      {
+        "name": "npm",
+        "version": "10.1.0"
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-npm",
+        "version": "1.16.1",
+        "externalReferences": [
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-node-npm.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-node-npm/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          }
+        ]
+      },
+      {
+        "vendor": "@cyclonedx",
+        "name": "cyclonedx-library",
+        "version": "6.3.1",
+        "externalReferences": [
+          {
+            "url": "git+https://github.com/CycloneDX/cyclonedx-javascript-library.git",
+            "type": "vcs",
+            "comment": "as detected from PackageJson property \"repository.url\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library#readme",
+            "type": "website",
+            "comment": "as detected from PackageJson property \"homepage\""
+          },
+          {
+            "url": "https://github.com/CycloneDX/cyclonedx-javascript-library/issues",
+            "type": "issue-tracker",
+            "comment": "as detected from PackageJson property \"bugs.url\""
+          }
+        ]
+      }
+    ],
+    "component": {
+      "type": "application",
+      "name": "thereactapp",
+      "bom-ref": "-/thereactapp@-",
+      "purl": "pkg:npm/thereactapp",
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": ""
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "mongodb",
+      "version": "6.3.0",
+      "bom-ref": "mongodb@6.3.0",
+      "author": "The MongoDB NodeJS Team",
+      "description": "The official MongoDB driver for Node.js",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/mongodb@6.3.0",
+      "externalReferences": [
+        {
+          "url": "git+ssh://git@github.com/mongodb/node-mongodb-native.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mongodb/node-mongodb-native",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://jira.mongodb.org/projects/NODE/issues/",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/mongodb/-/mongodb-6.3.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "b6dd0ab868c6b4b5212e8536eb7fb1bd098f1c4193c392db70d0bbdc4a054588121f066de6db28242d75d210f23b5923433a6036ba5d712cdaf4f92758de0bac"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/mongodb"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "saslprep",
+      "group": "@mongodb-js",
+      "version": "1.1.4",
+      "bom-ref": "@mongodb-js/saslprep@1.1.4",
+      "author": "Dmitry Tsvettsikh",
+      "description": "SASLprep: Stringprep Profile for User Names and Passwords, rfc4013",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40mongodb-js/saslprep@1.1.4",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mongodb-js/devtools-shared.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mongodb-js/devtools-shared/tree/main/packages/saslprep",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://jira.mongodb.org/projects/COMPASS/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@mongodb-js/saslprep/-/saslprep-1.1.4.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "f3327c375c79d71a3d8703e1e805a729d2c6102e4dde50daea49acd581e6141a11853a4947a1c6f305a4d2d7753150aef5c0f8601aef8d912d77939bc3415b9f"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@mongodb-js/saslprep"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "sparse-bitfield",
+      "version": "3.0.3",
+      "bom-ref": "sparse-bitfield@3.0.3",
+      "author": "Mathias Buus",
+      "description": "Bitfield that allocates a series of small buffers to support sparse bits without allocating a massive buffer",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/sparse-bitfield@3.0.3",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mafintosh/sparse-bitfield.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mafintosh/sparse-bitfield",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mafintosh/sparse-bitfield/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/sparse-bitfield/-/sparse-bitfield-3.0.3.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "92fce18bbbea2937e48743d953ed83d8f225970db29aa24aba351cc8f31df58ef936fe273db189657361c6c81d41a6f606694372dd589df40282e12f1ebed5b1"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/sparse-bitfield"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "memory-pager",
+      "version": "1.5.0",
+      "bom-ref": "memory-pager@1.5.0",
+      "author": "Mathias Buus",
+      "description": "Access memory using small fixed sized buffers",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/memory-pager@1.5.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mafintosh/memory-pager.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mafintosh/memory-pager",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mafintosh/memory-pager/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/memory-pager/-/memory-pager-1.5.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "652e01a78aff6687aaebe34b2693fed19ce6d2947cc21b463dfd5713128b24101ccc63274a2dc8b75e0e88d092b6342333a354d689234064b180464df1e0582a"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/memory-pager"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "bson",
+      "version": "6.2.0",
+      "bom-ref": "bson@6.2.0",
+      "author": "The MongoDB NodeJS Team",
+      "description": "A bson parser for node.js and the browser",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/bson@6.2.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mongodb/js-bson.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mongodb/js-bson#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://jira.mongodb.org/projects/NODE/issues/",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/bson/-/bson-6.2.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "203d5c23eedb6b33c3c8bf70632f46690f20104a215af71497f61fd1d21dbad2719e6227104c82b1be1ac32fce8817da965ef3040d7bf4f6a18b7bc2745cdedd"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/bson"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "mongodb-connection-string-url",
+      "version": "3.0.0",
+      "bom-ref": "mongodb-connection-string-url@3.0.0",
+      "description": "MongoDB connection strings, based on the WhatWG URL API",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:npm/mongodb-connection-string-url@3.0.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mongodb-js/mongodb-connection-string-url.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/mongodb-js/mongodb-connection-string-url",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mongodb-js/mongodb-connection-string-url/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/mongodb-connection-string-url/-/mongodb-connection-string-url-3.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "b7555ffa6d48e610b6339449c7fec0b71800072d5c66620f411317c3e80420f9ff719345dce8b2fa5d14232a54c15079b6b7161eaddcae0da0dee011f5a030b1"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/mongodb-connection-string-url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "whatwg-url",
+      "group": "@types",
+      "version": "11.0.4",
+      "bom-ref": "@types/whatwg-url@11.0.4",
+      "description": "TypeScript definitions for whatwg-url",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40types/whatwg-url@11.0.4#types/whatwg-url",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/whatwg-url",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/whatwg-url",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@types/whatwg-url/-/whatwg-url-11.0.4.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "9570a64d648726f7f44d148ee7c9e6f7bf1bf0727f11db12b0428b7773831c58e8fb7546032c93a78bf9d275afc2dcc1c52310ad538aeed72e374cc63cb20233"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@types/whatwg-url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "webidl-conversions",
+      "group": "@types",
+      "version": "7.0.3",
+      "bom-ref": "@types/webidl-conversions@7.0.3",
+      "description": "TypeScript definitions for webidl-conversions",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/%40types/webidl-conversions@7.0.3#types/webidl-conversions",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/DefinitelyTyped/DefinitelyTyped.git#types/webidl-conversions",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\" and \"repository.directory\""
+        },
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/webidl-conversions",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/DefinitelyTyped/DefinitelyTyped/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/@types/webidl-conversions/-/webidl-conversions-7.0.3.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "0a2249bdc46d220cda7470985f0edda849cc3518e11999582b4e4c8fd3b292da95f2e553f1f0f6045381ed2d6ec011372a3d99fb85323e6170fc8c60c3f2c094"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/@types/webidl-conversions"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "whatwg-url",
+      "version": "13.0.0",
+      "bom-ref": "whatwg-url@13.0.0",
+      "author": "Sebastian Mayr",
+      "description": "An implementation of the WHATWG URL Standard's URL API and parsing machinery",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/whatwg-url@13.0.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/jsdom/whatwg-url.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jsdom/whatwg-url#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/jsdom/whatwg-url/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/whatwg-url/-/whatwg-url-13.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "f5659bca69ea8f9efe5c4baa0031eb089d9e497ce7f165c85bf61219a66d6f658a0089d0e821df69451c4f2caf7abd29f010e0e52b4b42af21d6fb59bb098e8a"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/whatwg-url"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "tr46",
+      "version": "4.1.1",
+      "bom-ref": "tr46@4.1.1",
+      "author": "Sebastian Mayr",
+      "description": "An implementation of the Unicode UTS #46: Unicode IDNA Compatibility Processing",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/tr46@4.1.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/jsdom/tr46.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jsdom/tr46#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/jsdom/tr46/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/tr46/-/tr46-4.1.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "da5bffeba4fb7b9c8dca10000b835a29ee6755abf3b86250555b5160bc90d8e23cb6c27ad4f30b95e95e85bd308b61f1ebe853fce254599730f0c8e54919f1bf"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/tr46"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "punycode",
+      "version": "2.3.1",
+      "bom-ref": "punycode@2.3.1",
+      "author": "Mathias Bynens",
+      "description": "A robust Punycode converter that fully complies to RFC 3492 and RFC 5891, and works on nearly all JavaScript platforms.",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "purl": "pkg:npm/punycode@2.3.1",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/mathiasbynens/punycode.js.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://mths.be/punycode",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/mathiasbynens/punycode.js/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "bd8b7b503d54f5683ad77f2c84bb4b3af740bbef03b02fe2945b44547707fb0c9d712a4d136d007d239db9fe8c91115a84be4563b5f5a14ee7295645b5fabc16"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/punycode"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "webidl-conversions",
+      "version": "7.0.0",
+      "bom-ref": "webidl-conversions@7.0.0",
+      "author": "Domenic Denicola",
+      "description": "Implements the WebIDL algorithms for converting to and from JavaScript values",
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ],
+      "purl": "pkg:npm/webidl-conversions@7.0.0",
+      "externalReferences": [
+        {
+          "url": "git+https://github.com/jsdom/webidl-conversions.git",
+          "type": "vcs",
+          "comment": "as detected from PackageJson property \"repository.url\""
+        },
+        {
+          "url": "https://github.com/jsdom/webidl-conversions#readme",
+          "type": "website",
+          "comment": "as detected from PackageJson property \"homepage\""
+        },
+        {
+          "url": "https://github.com/jsdom/webidl-conversions/issues",
+          "type": "issue-tracker",
+          "comment": "as detected from PackageJson property \"bugs.url\""
+        },
+        {
+          "url": "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-7.0.0.tgz",
+          "type": "distribution",
+          "hashes": [
+            {
+              "alg": "SHA-512",
+              "content": "57075d06e903ceeef5a1f7c0411f7be6e9c1206a9f299a4cfbc657eb24a4f27621568a39098699cb3b77601bd8b51b4ef9aa0696ac4f83f07cecd19567f7eeea"
+            }
+          ],
+          "comment": "as detected from npm-ls property \"resolved\" and property \"integrity\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cdx:npm:package:path",
+          "value": "node_modules/webidl-conversions"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "-/thereactapp@-",
+      "dependsOn": [
+        "mongodb@6.3.0"
+      ]
+    },
+    {
+      "ref": "mongodb@6.3.0",
+      "dependsOn": [
+        "@mongodb-js/saslprep@1.1.4",
+        "bson@6.2.0",
+        "mongodb-connection-string-url@3.0.0"
+      ]
+    },
+    {
+      "ref": "@mongodb-js/saslprep@1.1.4",
+      "dependsOn": [
+        "sparse-bitfield@3.0.3"
+      ]
+    },
+    {
+      "ref": "sparse-bitfield@3.0.3",
+      "dependsOn": [
+        "memory-pager@1.5.0"
+      ]
+    },
+    {
+      "ref": "memory-pager@1.5.0"
+    },
+    {
+      "ref": "bson@6.2.0"
+    },
+    {
+      "ref": "mongodb-connection-string-url@3.0.0",
+      "dependsOn": [
+        "@types/whatwg-url@11.0.4",
+        "whatwg-url@13.0.0"
+      ]
+    },
+    {
+      "ref": "@types/whatwg-url@11.0.4",
+      "dependsOn": [
+        "@types/webidl-conversions@7.0.3"
+      ]
+    },
+    {
+      "ref": "@types/webidl-conversions@7.0.3"
+    },
+    {
+      "ref": "whatwg-url@13.0.0",
+      "dependsOn": [
+        "tr46@4.1.1",
+        "webidl-conversions@7.0.0"
+      ]
+    },
+    {
+      "ref": "tr46@4.1.1",
+      "dependsOn": [
+        "punycode@2.3.1"
+      ]
+    },
+    {
+      "ref": "punycode@2.3.1"
+    },
+    {
+      "ref": "webidl-conversions@7.0.0"
+    }
+  ]
+}

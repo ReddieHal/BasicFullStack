@@ -1,12 +1,13 @@
 # Simple 'n Easy Full Stack App for CSC424
 
-Hi! I'm Gabriel and this is the submission for the start of csc424.
-
+Hi! I'm Gabriel and this is the submission for the start of csc424 RND 2!!
 
 # READ BEFORE RUNNING
 
 **RUN NPM INSTALL AFTER CLONING**
 I have a habit of not uploading the node_modules or atleast trying not to. So please run npm install to run the packages needed before running the website front and backend
+
+**3 DIFFEREN SBOMS, ONE IN EACH DIRECTORY(ROOT, FRONTEND, BACKEND) - title 'location'SBOM.json**
 
 **Implemented Features**
 -Implemented MONGODB Backend for users and pwds
