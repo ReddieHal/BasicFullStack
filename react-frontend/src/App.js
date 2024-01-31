@@ -7,12 +7,13 @@ import { fakeAuth } from "./utils/FakeAuth";
 import { useAuth, AuthProvider } from "./context/AuthProvider";
 import React, { useState, useEffect, useContext } from "react";
 import { Login } from "./Login";
+import { useCookies } from "react-cookie";
 
 export const AuthContext = React.createContext(null);
 
 const App = () => {
     const [user, setUser] = useState(null);
-    const [token, setToken] = useState(null);
+    const [token, setToken] = useCookies(["token"]);
     const navigate = useNavigate();
 
     return (
@@ -35,14 +36,14 @@ const App = () => {
 
 const Navigation = () => {
   const navigate = useNavigate();
-  const { value } = useAuth();
+  const [token, setToken] = useCookies(["token"]);
 
   const handleLogin = async () => {
     navigate("/login");
   };
 
   const handleLogout = async () => {
-    value.onLogout();
+    setToken("token", "");
   };
 
   return (
@@ -51,7 +52,7 @@ const Navigation = () => {
       <NavLink to="/landing">Landing</NavLink>
       <NavLink to="/login">Login</NavLink>
       <NavLink to="/signup">Signup</NavLink>
-      {value.token ? (
+      {token.token ? (
      <button onClick={handleLogout}>Sign Out</button>
     ) : (
      <button onClick={handleLogin}>Sign In</button>

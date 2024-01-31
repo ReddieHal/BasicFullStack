@@ -1,17 +1,18 @@
 import { useAuth } from "./context/AuthProvider";
 import { useState } from "react";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
-    
+    const navigate = useNavigate();
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
-    const { value } = useAuth();
+    const [token, setToken] = useCookies("token", "");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         const login = {username:username, pwd:password};
-        const promise = await fetch("http://localhost:8000/account/login", {
+        const promise = await fetch("https://localhost:8000/account/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -19,10 +20,12 @@ export const Login = () => {
             body: JSON.stringify(login),
         });
        
-        const response = await promise;
-        if (response.ok) {
-            const token = await response.text();
-            value.onLogin(token);
+        const response = await promise.json();
+        const ourToken = response.token;
+        
+        setToken("token", ourToken);
+        if (ourToken) {
+            navigate("/landing");
         } else {
             alert("Login Failed");
         }

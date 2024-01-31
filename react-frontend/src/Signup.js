@@ -10,7 +10,7 @@ export const Signup = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (password === password2) {
-            const promise = await fetch("http://localhost:8000/account/register", {
+            const promise = await fetch("https://localhost:8000/account/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -22,8 +22,10 @@ export const Signup = () => {
             if (response.ok) {
                 alert("Account Created");
                 navigate("/login")
-            } else if (response.status === 401) {
-                alert("Account Creation Failed And/Or Bad Password\nPassword must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number");
+            } else if (response.status === 401 && response.body === "Bad Password") {
+                alert("Bad Password\nPassword must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number");
+            } else if (response.status === 401 && response.body === "User Exists") {
+                alert("User Already Exists!");
             } else {
                 alert("Account Creation Failed");
             }
