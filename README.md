@@ -41,6 +41,7 @@ By Alexis Ramirez using Snyk and Fossa
    - Flagged Licenses: GPL-2.0-only
 	 - According to Fossa: 
      - "These packages contain code files that may require you to disclose your source code under a compatible license, unless they’re distributed and run as completely separate processes & packages."
+   - Result: Added license to repo
 
 ### Code Security
 
