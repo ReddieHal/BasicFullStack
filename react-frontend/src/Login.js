@@ -23,7 +23,7 @@ export const Login = () => {
         const response = await promise.json();
         const ourToken = response.token;
         
-        setToken("token", ourToken);
+        setToken("token", ourToken, {sameSite : 'strict'});
         if (ourToken) {
             navigate("/landing");
         } else {

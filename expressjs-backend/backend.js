@@ -4,15 +4,17 @@ import https from 'https';
 import fs from 'fs';
 import userServices from "./models/userServices.js";
 import bcrypt from 'bcrypt';
+import helmet from 'helmet';
 import { authenticateUser, loginUser} from "./models/auth.js";
 const app = express();
 const port = 8000;
 
+app.use(helmet());
 app.use(cors());
 app.use(express.json());
 
 const isPasswordOk = (pwd) => {
-    return pwd.length >= 8 && /[A-Z]/.test(pwd) && /[a-z]/.test(pwd) && /[0-9]/.test(pwd);
+    return (typeof pwd === 'string') && pwd.length >= 8 && /[A-Z]/.test(pwd) && /[a-z]/.test(pwd) && /[0-9]/.test(pwd);
 }
 
 // get users, if request sends a name filter then it'll filter otherwise return all users
