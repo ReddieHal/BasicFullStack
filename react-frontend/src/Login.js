@@ -3,6 +3,10 @@ import { useState } from "react";
 import { useCookies } from "react-cookie";
 import { useNavigate } from "react-router-dom";
 
+// if going through google oauth, the user will be redirected to the /oath route
+// otherwise, the user will be redirected to the /login route
+// creating checking if a user exists and if not throwing an error
+// if the user exists, then the user will be logged in and redirected to the /landing route
 export const Login = () => {
     const navigate = useNavigate();
     const [username, setUsername] = useState("");
@@ -61,7 +65,7 @@ export const Login = () => {
             onChange={(e) => setPassword(e.target.value)} required /> 
         <button type="submit">Sign in</button>
         </form>
-        <button onClick={oauthLogin}>Sign in with Google</button>
+        <div className="centered-container"><button onClick={oauthLogin}>Or Login with Google</button></div>
         
         </>
     );

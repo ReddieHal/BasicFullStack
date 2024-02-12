@@ -43,6 +43,9 @@ export const Landing = () => {
       ) : (
         <table className="user-table">
           <thead>
+          <tr>
+          <th colSpan="2">Potential Contacts</th>
+          </tr>
             <tr>
               <th>ID</th>
               <th>Name</th>

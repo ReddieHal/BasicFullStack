@@ -33,6 +33,20 @@ export const Signup = () => {
             alert("Passwords Don't Match");
         }
     }
+
+    const oauthLogin = async (e) => {
+        const promise = await fetch("https://localhost:8000/request", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        const response = await promise.json();
+        const url = response.url;
+        console.log(url)
+        window.location.href = url;
+    };
+
     return (
         <>
         <h2>Signup (Public)</h2>
@@ -54,6 +68,7 @@ export const Signup = () => {
             onChange={(e) => setPassword2(e.target.value)} required /> 
         <button type="submit">Sign up</button>
         </form>
+        <div className="centered-container"><button onClick={oauthLogin}>Or Sign up with Google</button></div>
         </>
     );
     }
