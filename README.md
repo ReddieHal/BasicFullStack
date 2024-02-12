@@ -11,6 +11,9 @@ I have a habit of not uploading the node_modules or atleast trying not to. So pl
 
 **Implemented Features**
 - Added OAUTH - PAIN IN MY BUTT
+	- Had to do something a little bit special because the redirection threw off my normal flow for auth
+	- Added a new page to the route that will just take the token from the URL then insert it into the state as normal
+	- Couldn't figure out how to implement it as a fetch because of CORS issues but it works?
 
 ***OLD***
  - Implemented MONGODB Backend for users and pwds
