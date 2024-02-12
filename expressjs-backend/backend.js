@@ -5,11 +5,20 @@ import fs from 'fs';
 import userServices from "./models/userServices.js";
 import bcrypt from 'bcrypt';
 import { authenticateUser, loginUser} from "./models/auth.js";
+import authRouter from "./routes/oauth.js";
+import requestRouter from "./routes/request.js";
+
 const app = express();
 const port = 8000;
 
 app.use(cors());
 app.use(express.json());
+
+/* const logRequest = (req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next();
+};
+app.use(logRequest); */
 
 const isPasswordOk = (pwd) => {
     return pwd.length >= 8 && /[A-Z]/.test(pwd) && /[a-z]/.test(pwd) && /[0-9]/.test(pwd);
@@ -56,10 +65,10 @@ app.post('/account/login', (req, res) => {
     }
 }); */
 
+app.use("/oath", authRouter);
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+app.use("/request", requestRouter);
+
 
 https.createServer({
     key: fs.readFileSync('cert/key.pem'),

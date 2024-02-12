@@ -2,6 +2,7 @@ import { Routes, Route, Link, NavLink, useNavigate } from "react-router-dom";
 import { Home } from "./Home";
 import { Landing } from "./Landing";
 import { Signup } from "./Signup";
+import { RedirectToken } from "./utils/RedirectToken";
 import { ProtectedRoute } from "./utils/ProtectedRoute";
 import { fakeAuth } from "./utils/FakeAuth";
 import { useAuth, AuthProvider } from "./context/AuthProvider";
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="home" element={<Home />}/>
         <Route path="login" element={<Login />} />  
         <Route path="signup" element={<Signup />} />
+        <Route path="redirect" element={<RedirectToken />} />
         <Route path="*" element={<p>There's nothing here: 404!</p>} />
         </Routes>
       </AuthProvider>

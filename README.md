@@ -10,14 +10,14 @@ I have a habit of not uploading the node_modules or atleast trying not to. So pl
 **3 DIFFEREN SBOMS, ONE IN EACH DIRECTORY(ROOT, FRONTEND, BACKEND) - title 'location'SBOM.json**
 
 **Implemented Features**
--Implemented MONGODB Backend for users and pwds
--Utilizing JSON Webtokens to secure sessions and make sure people have right access for api searches in backend
--Hardening/encrypting certain bits of data
--Enabling https
--Directory
-
+- Added OAUTH - PAIN IN MY BUTT
 
 ***OLD***
+ - Implemented MONGODB Backend for users and pwds
+ - Utilizing JSON Webtokens to secure sessions and make sure people have right access for api searches in backend
+ - Hardening/encrypting certain bits of data
+ - Enabling https
+ - Directory
  - Login and Registration Pages
 	 - Login page checks with accounts/login api to check if user exists
 	 - Registration checks password on backend if good and adds a new user to the active table on accounts/register

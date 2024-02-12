@@ -2,11 +2,15 @@ import React, { useEffect } from "react";
 import { useAuth } from "./context/AuthProvider.js";
 import { useCookies } from "react-cookie";
 import "./user-table.css";
+const queryParameters = new URLSearchParams(window.location.search);
+const google_token = queryParameters.get("token");
+
 
 export const Landing = () => {
   const [token, setToken] = useCookies("");
   const [users, setUsers] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+
 
   useEffect(() => {
     const getUsers = async () => {

@@ -30,6 +30,19 @@ export const Login = () => {
             alert("Login Failed");
         }
     };
+
+    const oauthLogin = async (e) => {
+        const promise = await fetch("https://localhost:8000/request", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        });
+        const response = await promise.json();
+        const url = response.url;
+        console.log(url)
+        window.location.href = url;
+    };
     
     
     return (
@@ -48,6 +61,7 @@ export const Login = () => {
             onChange={(e) => setPassword(e.target.value)} required /> 
         <button type="submit">Sign in</button>
         </form>
+        <button onClick={oauthLogin}>Sign in with Google</button>
         
         </>
     );
